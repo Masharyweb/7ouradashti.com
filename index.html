@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حوراء دشتي | 7ouradashti.com</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#FEFCF8;color:#222;padding-bottom:80px}
+.topbar{display:flex;justify-content:space-between;padding:14px 20px;background:#fff;border-bottom:1px solid #eee}
+.logo{font-weight:700}
+.hero{display:flex;align-items:center;gap:20px;padding:28px 20px;max-width:900px;margin:auto}
+.hero h1{font-size:42px}
+.hero p{color:#777;font-size:17px;margin-top:6px}
+.photo{width:140px;height:140px;border-radius:50%;object-fit:cover}
+.section{max-width:900px;margin:20px auto;padding:0 20px}
+.card{background:#fff;border:1px solid #F0E9DD;border-radius:14px;padding:20px;line-height:1.9}
+.pills{display:flex;gap:10px;margin:16px 0;flex-wrap:wrap}
+.pill{background:#F5F0E8;padding:10px 16px;border-radius:999px;cursor:pointer}
+.article{background:#fff;border:1px solid #F0E9DD;border-radius:14px;padding:18px;margin-top:12px;cursor:pointer}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);padding:20px;overflow:auto}
+.modal-content{background:#fff;max-width:800px;margin:30px auto;border-radius:16px;padding:26px;line-height:2}
+footer{text-align:center;color:#999;padding:20px;font-size:13px}
+.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;display:flex;justify-content:space-around;padding:10px 0}
+.bottomnav div{text-align:center;font-size:12px}
+</style>
+</head>
+<body>
+<div class="topbar"><div>7ouradashti.com</div><div>☰</div></div>
+
+<div class="hero">
+<div style="flex:1"><h1>حوراء دشتي</h1><p>كاتبة كويتية وأخصائية اجتماعية</p></div>
+<img class="photo" src="assets/317a9493b2ff7f13-______1.jpg" alt="حوراء دشتي">
+</div>
+
+<div class="section">
+<h3>نبذة تعريفية</h3>
+<div class="card">
+<p>كاتبة كويتية وأخصائية اجتماعية، تكتب في جريدة النهار، صاحبة مؤلفات اجتماعية وإنسانية، ومؤسسة مبادرة أمان للتوعية المجتمعية.</p>
+<p style="margin-top:10px">تُعنى بالكتابة عن القضايا الاجتماعية والإنسانية وتعزيز الوعي المجتمعي عبر المقالات والدراسات، مع تركيز على التمكين الاجتماعي وبناء دور المرأة والأسرة في المجتمع.</p>
+<p style="margin-top:10px"><b>رئيسة ومؤسسة دار أمان للاستشارات والتدريب</b> - مدربة دولية معتمدة ومدربة حياة في التأهيل السلوكي والدعم النفسي.</p>
+</div>
+<div class="pills">
+<div class="pill" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'})">📰 جريدة النهار</div>
+<div class="pill">📚 المؤلفات</div>
+<div class="pill">🛡️ مبادرة أمان</div>
+</div>
+</div>
+
+<div class="section" id="articles">
+<h3>المقالات</h3>
+<div class="article" onclick="openModal('m1')"><h3>ألوان الكذب</h3><p>13 سبتمبر 2026 • جريدة النهار</p></div>
+<div class="article" onclick="openModal('m2')"><h3>وجاءته البشرى</h3><p>28 أكتوبر 2026 • جريدة النهار</p></div>
+<div class="article" onclick="openModal('m3')"><h3>سر دعاء السكينة</h3><p>30 أغسطس 2026 • جريدة النهار</p></div>
+</div>
+
+<div class="section">
+<h3>تواصل وإعلام</h3>
+<div class="card">
+<p>البريد الإلكتروني: <b>info@7ouradashti.com</b></p>
+<p>انستغرام: @7oura_dashti</p>
+<p>X: @7oura_dashti</p>
+</div>
+</div>
+
+<footer>© ٢٠٢٤ - جميع الحقوق محفوظة لموقع 7ouradashti.com</footer>
+
+<div class="bottomnav"><div>🏠<br>الرئيسية</div><div>👤<br>نبذة</div><div>📄<br>المقالات</div><div>✉️<br>تواصل</div></div>
+
+<div class="modal" id="m1"><div class="modal-content"><span style="float:left;cursor:pointer" onclick="closeModal('m1')">×</span><h2>ألوان الكذب</h2><p>النص الكامل للمقال هنا.</p></div></div>
+<div class="modal" id="m2"><div class="modal-content"><span style="float:left;cursor:pointer" onclick="closeModal('m2')">×</span><h2>وجاءته البشرى</h2><p>النص الكامل للمقال هنا.</p></div></div>
+<div class="modal" id="m3"><div class="modal-content"><span style="float:left;cursor:pointer" onclick="closeModal('m3')">×</span><h2>سر دعاء السكينة</h2><p>النص الكامل للمقال هنا.</p></div></div>
+
+<script>
+function openModal(id){document.getElementById(id).style.display='block'}
+function closeModal(id){document.getElementById(id).style.display='none'}
+</script>
+</body>
+</html>
